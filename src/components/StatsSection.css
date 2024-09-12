@@ -1,0 +1,28 @@
+.status {
+  margin: -120px 100px 100px 100px;
+  height: 252px;
+  border: 0px solid white;
+  padding: 30px 5% 30px 5%;
+  background-color: #f7f7f7;
+  text-align: center;
+  z-index: 5;
+}
+
+.status-item {
+  padding-top: 15px;
+  float: left;
+  width: 25%;
+  height: 200px;
+}
+
+.status-item h7 {
+  display: flex;
+  font-size: 2.5rem;
+  padding: 5px 0;
+  justify-content: center;
+}
+
+.status-item img {
+  width: 45px;
+  height: 45px;
+}

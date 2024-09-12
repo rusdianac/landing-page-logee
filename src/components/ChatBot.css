@@ -1,0 +1,300 @@
+/* Container untuk animasi chat window */
+.chat-window-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  max-height: 0; /* Awal tersembunyi dengan height 0 */
+  overflow: hidden; /* Sembunyikan konten saat height 0 */
+  opacity: 0; /* Awal tersembunyi dengan opacity 0 */
+  transition: all 0.3s ease-in-out; /* Transisi halus untuk height dan opacity */
+  border: none;
+  transform-origin: bottom right; /* Animasi dimulai dari sudut kanan bawah */
+  border-radius: 10px;
+  z-index: 1000;
+  opacity: 0; /* Mulai dengan tidak terlihat */
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.3s ease-out; /* Transisi scale dan opacity */
+}
+
+/* Ketika chat window terbuka */
+.chat-window-container.open {
+  max-height: 400px; /* Ketika terbuka, beri height 400px */
+  opacity: 1; /* Buat elemen terlihat */
+}
+
+/* Ketika chat window ditutup */
+.chat-window-container.close {
+  max-height: 0; /* Kembali ke height 0 ketika ditutup */
+  opacity: 0; /* Hilangkan elemen */
+}
+
+/* Gaya untuk tombol chatbot */
+.chatbot-button {
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Gaya untuk ikon chatbot */
+.chatbot-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Tampilan jendela chat */
+.chat-window {
+  position: fixed;
+  bottom: 90px; /* Menyesuaikan dengan ukuran tombol */
+  right: 50px;
+  width: 340px;
+  height: 400px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Pastikan berada di depan elemen lain */
+  border: none;
+
+  overflow-y: auto;
+
+  box-sizing: border-box;
+}
+.chat-messages {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.message {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.message.user {
+  background-color: #d4edda;
+  text-align: right;
+}
+
+.message.bot {
+  background-color: #f8d7da;
+  text-align: left;
+}
+
+.chat-header {
+  height: 100px;
+  border-bottom: 1px none;
+  box-shadow: 0 4px 5px rgba(172, 168, 168, 0.3);
+  display: flex;
+  padding: 15px 0 0 40px;
+}
+
+.chat-header img {
+  justify-content: left;
+  width: 70px;
+  height: 70px;
+}
+.chat-header-text {
+  margin-left: 15px;
+}
+.chat-header-text h3 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.chat-header-text p {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+  text-align: left;
+}
+/* Gaya untuk waktu pesan */
+.chat-header-time {
+  font-size: 10px;
+  color: #999;
+  text-align: center;
+  margin-top: 2px;
+}
+
+/* Gaya untuk pilihan tombol */
+.options {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+.option-button {
+  background-color: #f767071a;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-align: right;
+  border-top-right-radius: 0;
+}
+
+.option-button:hover {
+  background-color: #de59008f;
+}
+
+/* Tampilan tombol chatbot */
+.chatbot-button {
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Gaya untuk ikon chatbot */
+.chatbot-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.chat-messages {
+  max-height: 300px; /* Batasi tinggi maksimal chat */
+  overflow-y: auto; /* Tambahkan scrollbar vertikal jika konten melebihi height */
+  padding: 10px;
+  background-color: #f5f5f5;
+  padding-bottom: 60px; /* Tambahkan jarak bawah agar ada space antara pesan terakhir dan batas bawah */
+  box-sizing: border-box; /* Pastikan padding dihitung dalam ukuran total elemen */
+}
+
+/* Untuk memastikan scrollbar terlihat halus */
+.chat-messages::-webkit-scrollbar {
+  width: 8px; /* Lebar scrollbar */
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* Warna scrollbar */
+  border-radius: 4px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Warna track scrollbar */
+}
+
+.message {
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-block; /* Agar lebar mengikuti panjang teks */
+  margin-top: 12px;
+  max-width: 250px; /* Batas maksimal lebar box */
+  word-wrap: break-word; /* Agar teks otomatis enter */
+  white-space: normal; /* Memastikan teks akan melanjutkan ke baris berikutnya */
+}
+
+.message.user {
+  margin-right: 20px;
+  background-color: #de59008f;
+  text-align: right;
+  border-top-right-radius: 0;
+  float: right;
+}
+
+.message.bot {
+  color: #f5f5f5;
+  background-color: #f76707;
+  text-align: left;
+  float: left;
+  border-top-left-radius: 0;
+  margin-left: 20px;
+  animation: slideIn 0.4s ease-out; /* Animasi pesan bot muncul */
+}
+
+/* Gaya untuk tombol Restart Chat */
+.restart-chat {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  padding: 6px;
+  background-color: #f76707;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  justify-content: center; /* Untuk memposisikan secara horizontal */
+}
+.restart-button img {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+.restart-button {
+  cursor: pointer;
+  text-align: center;
+  color: #f5f5f5;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center; /* Untuk memposisikan secara vertikal */
+}
+
+.restart-button h3 {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 570;
+}
+
+/* Loading dots */
+.loading-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+/* Pesan bot tanpa background untuk animasi loading */
+.no-background {
+  background-color: transparent !important;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0s;
+}
+
+/* Animasi bouncing untuk loading dots */
+@keyframes bounce {
+  0%,
+  80%,
+  100% {
+    transform: scale(0.8);
+    background-color: #ccc;
+  }
+  40% {
+    transform: scale(1.2);
+    background-color: #f76707; /* Ubah warna dot saat bounce */
+  }
+}

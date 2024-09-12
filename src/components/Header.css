@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  height: 80px;
+  width: 100%;
+  padding: 14px 80px 14px 80px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+header.scrolled {
+  background-color: white; /* Ubah menjadi putih saat di-scroll */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan jika diinginkan */
+}
+
+header.scrolled .header-left a {
+  color: black; /* Ubah warna teks saat background menjadi putih */
+}
+
+header.scrolled .btn-register {
+  font-size: 16px;
+  width: 124px;
+  height: 44px;
+  padding: 13px 40px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  margin-right: 15px;
+  transition: all 0.5s;
+  border: 1px solid #f76707;
+  color: #f76707;
+}
+
+.logo img {
+  width: auto;
+  height: 35px;
+  float: left;
+  margin-top: 13px;
+}
+
+.header-left {
+  float: left;
+  margin-top: 0px;
+  margin-left: 40px;
+  width: 30%;
+}
+
+.header-left a {
+  line-height: 65px;
+  position: relative;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  display: block;
+  float: left;
+  display: block;
+}
+
+.header-left a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 3px;
+  width: 0;
+  bottom: 5px;
+  background-color: #f76707;
+  transition: 0.6s;
+}
+
+.header-left a:hover::after {
+  width: 100%;
+}
+
+.auth-buttons {
+  float: right;
+  margin-top: 4px;
+  display: flex;
+  justify-content: right; /* Untuk memposisikan secara horizontal */
+  padding-right: 20px;
+  width: 30%;
+}
+
+.header .btn {
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.btn-register {
+  font-size: 16px;
+  width: 124px;
+  height: 44px;
+  padding: 15px 40px;
+  background-color: transparent;
+  cursor: pointer;
+  margin-right: 15px;
+  transition: all 0.5s;
+  border: 1px solid white;
+}
+
+.btn-login {
+  font-size: 16px;
+  padding: 15px 5px;
+  width: 124px;
+  height: 44px;
+  background-color: #f76707;
+  cursor: pointer;
+  transition: all 0.5s;
+  border: 1px solid #f76707;
+}
+
+.btn-register:hover {
+  background-color: #f76707;
+}
+
+.btn-login:hover {
+  background-color: #ca5406;
+}

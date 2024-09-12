@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.hero {
+  background-image: url("../assets/images/backgroundImage.png");
+  color: white;
+  background-size: cover;
+  height: 150vh;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 60px;
+  margin-top: 430px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 30px;
+  margin-bottom: 26px;
+  font-weight: lighter;
+  line-height: 1.5;
+}
+.transformasi {
+  color: #f76707;
+}
+.pemain {
+  font-weight: 700;
+}
+
+.ekosistem {
+  font-weight: 700;
+}
+.hero-buttons .btn {
+  margin: 50px 20px;
+  padding: 10px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.playbut {
+  margin-right: 10px;
+}
+
+.btn-trial {
+  background-color: #f76707;
+  color: white;
+  border: none;
+  width: 250px;
+  height: 70px;
+}
+
+.btn-video {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  width: 227px;
+  height: 70px;
+}

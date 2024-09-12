@@ -1,0 +1,108 @@
+.testimonial-section {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.testimonial-content {
+  width: 1200px;
+  height: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.quote-image {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: left;
+}
+blockquote {
+  font-size: 2rem;
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+.quote-divider {
+  border: none; /* Menghilangkan garis default */
+  border-top: 3px solid white; /* Mengatur warna dan ketebalan garis */
+  margin: 0; /* Memberikan jarak di atas dan di bawah garis */
+  width: 60%; /* Mengatur lebar garis agar tidak memenuhi lebar kontainer */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  opacity: 0.3;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-list {
+  display: flex;
+  position: relative;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 80px;
+}
+
+.avatar-item {
+  position: absolute;
+
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.avatar-center {
+  transform: scale(1.5); /* Zoom avatar yang berada di tengah */
+  width: 90px;
+  height: 90px;
+  z-index: 5;
+}
+
+.avatar-left {
+  transform: translateX(-340px) scale(1);
+  z-index: 1;
+}
+
+.avatar-left-mid {
+  transform: translateX(-200px) scale(1);
+  z-index: 5;
+}
+
+.avatar-right {
+  transform: translateX(340px) scale(1);
+  z-index: 1;
+}
+
+.avatar-right-mid {
+  transform: translateX(200px) scale(1);
+  z-index: 5;
+}
+
+.user-info h4 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.user-info p {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 300;
+}

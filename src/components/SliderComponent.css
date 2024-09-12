@@ -1,0 +1,136 @@
+.slider-container {
+  width: 1650px;
+  height: auto;
+  margin: 50px auto;
+  text-align: left;
+}
+
+.slide {
+  position: relative;
+  margin: 10px;
+  overflow: hidden; /* Pastikan gambar yang di-zoom tidak keluar dari container */
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out; /* Animasi smooth */
+}
+
+.slide:hover img {
+  transform: scale(1.1); /* Zoom 10% lebih besar saat hover */
+}
+
+.slider-container h2 {
+  font-size: 30px;
+  color: #e65c00;
+  text-align: center;
+}
+.slider-container h1 {
+  font-size: 50px;
+  color: #454545;
+  text-align: center;
+}
+.slick-slide {
+  padding: 20px;
+}
+
+.caption {
+  position: absolute;
+  bottom: 20px; /* Mengatur jarak caption dari bawah */
+  left: 20px; /* Mengatur jarak caption dari kiri */
+  color: white; /* Teks berwarna putih agar kontras dengan gambar */
+  padding: 10px;
+  border-radius: 5px;
+  width: 460px;
+  height: 300px;
+  padding: 20px;
+}
+
+.caption h3 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.caption p {
+  font-size: 20px;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+
+.cta-button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.cta-button:hover {
+  background-color: #e65c00;
+}
+
+/* Gaya untuk tombol panah */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.next-arrow {
+  right: 0;
+}
+
+.prev-arrow {
+  left: 0;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Style untuk dot slider */
+/* Style untuk dot slider yang tidak aktif */
+.slick-dots li button:before {
+  font-size: 10px; /* Ukuran dot tidak aktif lebih besar */
+  color: #6c6969; /* Warna dot yang tidak aktif */
+  border-radius: 50%; /* Membuat dot menjadi bulat */
+  width: 10px; /* Lebar dot tidak aktif */
+  height: 10px; /* Tinggi dot tidak aktif */
+  content: ""; /* Menghapus isi default */
+  display: inline-block;
+  background-color: #6c6969; /* Warna default dot tidak aktif */
+  transition: all 0.3s ease; /* Efek transisi halus */
+}
+
+.slick-dots li.slick-active button:before {
+  width: 40px; /* Panjang dot aktif */
+  height: 12px; /* Tinggi dot aktif tetap */
+  background-color: #ff6600; /* Warna dot aktif oranye */
+  border-radius: 20px; /* Membuat bentuk dot aktif menjadi oval */
+  content: ""; /* Menghapus isi default */
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0; /* Memberikan sedikit padding di atas dan bawah */
+}
+
+.slick-dots li {
+  margin: 0 5px; /* Jarak antar dot */
+}

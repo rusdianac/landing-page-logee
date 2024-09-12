@@ -1,0 +1,98 @@
+/* Main container */
+.stats-section {
+  display: flex;
+  width: 100%;
+  height: 850px;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+/* Image section */
+.image-container {
+  flex: 1;
+  width: 50%;
+  position: relative;
+}
+
+.main-image {
+  width: auto; /* Adjust size as needed */
+  height: 800px;
+  object-fit: cover;
+  margin: 10px 0 20px 50px;
+  position: absolute;
+  right: 0;
+}
+
+/* Text section on the right */
+.text-section {
+  display: flex;
+  width: 50%;
+  flex-direction: column; /* This ensures that the text sections are stacked vertically */
+  margin-left: 30px;
+}
+
+/* Title */
+.text-section h2 {
+  font-size: 50px;
+  color: #454545;
+  margin: 0 0 20px 20px;
+  text-align: left;
+}
+
+.text-section h3 {
+  font-size: 25px;
+  color: #ff6c00;
+  margin: 0 0 20px 20px;
+  text-align: left;
+}
+/* Each text item */
+.statitem {
+  margin: 0 0 20px 20px;
+  width: 800px;
+  height: 150px;
+  padding: 15px;
+  cursor: pointer;
+  background-color: #f5f5f5; /* Default background color */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
+  display: flex; /* Make the h3 and p elements side by side */
+  align-items: center; /* Vertically align the h3 and p elements */
+  justify-content: space-between; /* Add spacing between the h3 and p */
+}
+
+/* Text inside each item */
+.statitem h3 {
+  margin: 0;
+  font-size: 30px;
+  color: #333;
+  flex-shrink: 0; /* Prevent h3 from shrinking */
+  margin-right: 50px; /* Add spacing between h3 and p */
+}
+
+/* Adjust the size and style of the paragraph */
+.statitem p {
+  font-size: 20px;
+  color: #666;
+  margin: 0;
+  flex-grow: 1; /* Allow the paragraph to take up available space */
+  text-align: justify;
+}
+
+/* Highlighted section */
+.statitem.highlighted {
+  background-color: #ff6c00; /* Orange background */
+  color: white; /* Change text to white */
+}
+
+/* Text color change inside highlighted item */
+.statitem.highlighted h3,
+.statitem.highlighted p {
+  color: white;
+}
+
+/* Hover effect */
+.statitem:hover {
+  background-color: #e0e0e0; /* Slightly darker gray on hover */
+}

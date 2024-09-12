@@ -1,0 +1,26 @@
+.animasi-section {
+  height: 396px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.animasi-section h2 {
+  font-size: 30px;
+  padding-top: 10px;
+  margin-bottom: 30px;
+  color: #454545;
+}
+.animasi-section .cta-button {
+  height: 70px;
+}
+.logo-carousel img {
+  width: 200px;
+  height: auto;
+  margin: 10px auto;
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

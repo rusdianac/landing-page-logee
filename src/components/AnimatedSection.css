@@ -1,0 +1,103 @@
+/* App.css */
+.layanan {
+  width: 100%;
+  height: 600px;
+  text-align: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  justify-content: left; /* Untuk memposisikan secara horizontal */
+  width: 50%;
+  height: 400px;
+  text-align: left;
+  margin-right: 20px;
+}
+
+.service h3 {
+  color: #ff5600;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.service h2 {
+  color: #454545;
+  margin-bottom: 10px;
+  font-size: 48px;
+}
+
+.service p {
+  margin-bottom: 10px;
+  color: #454545;
+  font-size: 24px;
+}
+.service .cta-button {
+  width: 200px;
+  height: 45px;
+}
+.produks {
+  width: 50%;
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.produk {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 290px;
+  height: 223px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+  margin: 5px 15px;
+}
+
+.produks p {
+  font-weight: 400;
+}
+/* Hidden states */
+.animate__hiddenLeft {
+  opacity: 0;
+  transform: translateX(-100px); /* Muncul dari kiri */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.animate__hiddenRight {
+  opacity: 0;
+  transform: translateX(100px); /* Muncul dari kanan */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Visible states */
+.animate__visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.produk h1 {
+  color: #ff6b00;
+}
+
+.produk p {
+  color: #454545;
+}

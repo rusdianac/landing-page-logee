@@ -1,0 +1,146 @@
+.faq-container {
+  width: 100%;
+  height: auto;
+}
+
+.faq-header {
+  width: 100%;
+  height: 50px;
+  padding-top: 30px;
+  margin-bottom: 20px;
+}
+
+.faq-header h1 {
+  color: #454545;
+  font-size: 60px;
+  text-align: center;
+  font-weight: 600;
+  width: auto;
+  height: 50px;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%); /* Mulai dari luar layar kiri */
+    opacity: 0; /* Tidak terlihat di awal */
+  }
+  to {
+    transform: translateX(0); /* Posisi fix di kolom */
+    opacity: 1; /* Muncul sepenuhnya */
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%); /* Mulai dari luar layar kanan */
+    opacity: 0; /* Tidak terlihat di awal */
+  }
+  to {
+    transform: translateX(0); /* Posisi fix di kolom */
+    opacity: 1; /* Muncul sepenuhnya */
+  }
+}
+
+.faq-column {
+  margin-top: 40px;
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0; /* Mulai dengan tidak terlihat */
+  transition: all 0.3s ease-in-out;
+}
+
+.faq-column:nth-child(1) {
+  animation: slideInFromLeft 1s forwards; /* Animasi kolom pertama dari kiri */
+}
+
+.faq-column:nth-child(2) {
+  animation: slideInFromRight 1s forwards; /* Animasi kolom kedua dari kanan */
+}
+
+.faq-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 50px;
+  text-align: center;
+  padding: 0 100px;
+  color: #353434;
+  justify-content: space-between; /* Memberikan jarak antar kolom */
+  align-items: flex-start; /* Membuat kolom selaras di atas */
+}
+
+.faq-item {
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden; /* Pastikan kita menyembunyikan konten saat tertutup */
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.faq-question {
+  height: 100px;
+  font-size: 25px;
+  padding: 15px;
+  background-color: #ffffff;
+  color: #454545;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question:hover {
+  background-color: #f76707;
+  color: #ffffff;
+}
+
+.faq-answer {
+  height: 0; /* Initial height is zero when closed */
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+.faq-divider {
+  width: 80%;
+  margin: 0 auto;
+  border: none;
+  border-top: 2px solid #ccc;
+  opacity: 0; /* Awalnya tidak terlihat */
+  height: 0; /* Awalnya tanpa tinggi */
+  transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out; /* Animasi kemunculan */
+}
+
+.faq-divider.open {
+  opacity: 1; /* Terlihat saat jawaban terbuka */
+  height: auto; /* Menampilkan garis */
+  margin-bottom: 10px; /* Berikan jarak saat terbuka */
+}
+
+.faq-answer p {
+  font-size: 20px;
+  text-align: justify;
+  margin: 0;
+  padding: 15px 20px;
+  background-color: #fff;
+}
+
+.arrow-icon {
+  width: 20px; /* Atur ukuran gambar ikon sesuai keinginan */
+  height: 20px;
+  transition: transform 0.3s ease-in-out; /* Animasi rotasi */
+}
+
+.arrow-icon.rotate {
+  transform: rotate(90deg); /* Rotasi 90 derajat saat terbuka */
+}
+.faq-item.open {
+  margin-bottom: 30px; /* Tambahkan jarak antara item terbuka dan yang di bawahnya */
+}
+
+/* Tambahkan padding atau jarak jika satu kolom lebih besar */
+.faq-container > .faq-column {
+  align-self: stretch; /* Membuat kedua kolom memiliki tinggi penuh */
+}
