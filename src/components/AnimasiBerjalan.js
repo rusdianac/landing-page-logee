@@ -67,7 +67,7 @@ const AnimasiBerjalan = () => {
             <img src={ikon11} alt="PTPN Logo" />
           </div>
         </Slider>
-        <button className="cta-button">Telusuri Kisah Mereka</button>
+        <button className="cta-button" onClick={() => window.location.href = 'https://logee.id/news?hl=id'}>Telusuri Kisah Mereka</button>
       </div>
     </div>
   );

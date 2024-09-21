@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Footer.css"; // Import file CSS untuk styling
 
 // Import ikon lokal
@@ -13,6 +13,34 @@ import logoikon from "../assets/images/logoikon.png";
 import garis from "../assets/images/garis.png";
 
 const Footer = () => {
+  const [emailInput, setEmailInput] = useState(""); // State for email input
+  const [message, setMessage] = useState(""); // State for response message
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+
+    // Send POST request to backend
+    try {
+      const response = await fetch("http://localhost:5001/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: emailInput }),
+      });
+
+      const data = await response.json();
+      if (response.status === 200) {
+        setMessage("Thank you for subscribing!");
+      } else {
+        setMessage("Subscription failed. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setMessage("Error sending subscription request.");
+    }
+  };
+
   return (
     <footer className="footer-container">
       <div className="logoikon">
@@ -26,20 +54,25 @@ const Footer = () => {
         <div className="footer-sosmed">
           <ul>
             <li className="logo-container">
-              <img src={instagram} alt="Instagram" />
-              <a href="https://www.instagram.com/t"></a>
+              <a href="https://www.instagram.com/logee.id/" target="_blank" rel="noopener noreferrer">
+                <img src={instagram} alt="Instagram" />
+              </a>
             </li>
             <li className="logo-container">
-              <img src={facebook} alt="Facebook" />
-              <a href="https://www.facebook.com"></a>
+              <a href="https://www.facebook.com/people/Logeeid/100084864591594/" target="_blank" rel="noopener noreferrer">
+                <img src={facebook} alt="Facebook" />
+              </a>
+              
             </li>
             <li className="logo-container">
+            <a href="https://twitter.com/logee_id" target="_blank" rel="noopener noreferrer">
               <img src={twitter} alt="Twitter" />
-              <a href="https://www.twitter.com/"></a>
+            </a>
             </li>
             <li className="logo-container">
+            <a href="https://id.linkedin.com/company/logee-indonesia" target="_blank" rel="noopener noreferrer">
               <img src={linkedin} alt="LinkedIn" />
-              <a href="https://www.linkedin.com/"></a>
+            </a>
             </li>
           </ul>
         </div>
@@ -67,13 +100,13 @@ const Footer = () => {
             <h3>Tautan</h3>
             <ul>
               <li>
-                <a href="/leap">LEAP</a>
+                <a href="https://leap.digitalbisa.id/our-product/logee">LEAP</a>
               </li>
               <li>
-                <a href="/artikel">Artikel</a>
+                <a href="https://logee.id/news?hl=id">Artikel</a>
               </li>
               <li>
-                <a href="/hubungi">Hubungi Kami</a>
+                <a href="https://logee.id/contact-us?hl=id">Hubungi Kami</a>
               </li>
               <li>
                 <a href="/syarat">Syarat & Ketentuan</a>
@@ -91,27 +124,34 @@ const Footer = () => {
             <h3>Solusi</h3>
             <ul>
               <li>
-                <a href="/transportasi">Transportasi</a>
+                <a href="https://logee.id/solutions?company=lgt">Transportasi</a>
               </li>
               <li>
-                <a href="/distribusi">Distribusi</a>
+                <a href="https://logee.id/solutions?company=lgd">Distribusi</a>
               </li>
               <li>
-                <a href="/visibility">Visibility</a>
+                <a href="https://logee.id/solutions?company=visibility">Visibility</a>
               </li>
             </ul>
           </div>
         </div>
         <div className="footer-newsletter">
-          <div className="kotak-newsletter">
-            <h3>Berlangganan Buletin Kami</h3>
-            <form>
-              <input type="email" placeholder="Your email address" />
-              <button type="submit">Berlangganan</button>
-            </form>
-            <p>*Kami Akan Mengirimkan Pembaruan Mingguan Untuk Manajemen Yang Lebih Optimal</p>
-          </div>
+        <div className="kotak-newsletter">
+          <h3>Berlangganan Buletin Kami</h3>
+          <form onSubmit={handleSubscribe}>
+            <input
+              type="email"
+              placeholder="Your email address"
+              value={emailInput}
+              onChange={(e) => setEmailInput(e.target.value)} // Update email input state
+              required
+            />
+            <button type="submit">Berlangganan</button>
+          </form>
+          <p>*Kami Akan Mengirimkan Pembaruan Mingguan Untuk Manajemen Yang Lebih Optimal</p>
+          {message && <p>{message}</p>} {/* Display success or error message */}
         </div>
+      </div>
       </div>
     </footer>
   );

@@ -43,10 +43,10 @@ function Header() {
       </div>
       <nav className="nav">
         <div className="header-left">
-          <a href="#">Produk</a>
-          <a href="#">Solusi</a>
-          <a href="#">Hubungi</a>
-          <a href="#">Artikel</a>
+          <a href="https://logee.id/products?hl=id">Produk</a>
+          <a href="https://logee.id/solutions?hl=id">Solusi</a>
+          <a href="https://logee.id/contact-us?hl=id">Hubungi</a>
+          <a href="https://logee.id/news?hl=id">Artikel</a>
         </div>
       </nav>
       <div className="auth-buttons">
@@ -66,8 +66,8 @@ function Header() {
           )}
         </div>
 
-        <button className="btn btn-register">Daftar</button>
-        <button className="btn btn-login">Masuk</button>
+        <button className="btn btn-register" onClick={() => window.location.href = 'https://app.logee.id/login'}>Daftar</button>
+        <button className="btn btn-login" onClick={() => window.location.href = 'https://app.logee.id/login'}>Masuk</button>
       </div>
     </header>
   );
