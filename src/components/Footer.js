@@ -100,13 +100,13 @@ const Footer = () => {
             <h3>Tautan</h3>
             <ul>
               <li>
-                <a href="/leap">LEAP</a>
+                <a href="https://leap.digitalbisa.id/our-product/logee">LEAP</a>
               </li>
               <li>
-                <a href="/artikel">Artikel</a>
+                <a href="https://logee.id/news?hl=id">Artikel</a>
               </li>
               <li>
-                <a href="/hubungi">Hubungi Kami</a>
+                <a href="https://logee.id/contact-us?hl=id">Hubungi Kami</a>
               </li>
               <li>
                 <a href="/syarat">Syarat & Ketentuan</a>
@@ -124,13 +124,13 @@ const Footer = () => {
             <h3>Solusi</h3>
             <ul>
               <li>
-                <a href="/transportasi">Transportasi</a>
+                <a href="https://logee.id/solutions?company=lgt">Transportasi</a>
               </li>
               <li>
-                <a href="/distribusi">Distribusi</a>
+                <a href="https://logee.id/solutions?company=lgd">Distribusi</a>
               </li>
               <li>
-                <a href="/visibility">Visibility</a>
+                <a href="https://logee.id/solutions?company=visibility">Visibility</a>
               </li>
             </ul>
           </div>
