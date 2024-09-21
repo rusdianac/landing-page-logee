@@ -19,8 +19,8 @@ function HeroSection() {
           , memberikan solusi nyata untuk keuntungan bisnis Anda.
         </p>
         <div className="hero-buttons">
-          <button className="btn btn-trial">Coba 7 Hari Gratis!</button>
-          <button className="btn btn-video">
+          <button className="btn btn-trial" onClick={() => window.location.href = 'https://logee.id/products?hl=id'}>Coba 7 Hari Gratis!</button>
+          <button className="btn btn-video" onClick={() => window.open('https://www.youtube.com/watch?v=O1AVm-FEV8o&t=2s', '_blank')}>
             <img src={playbut} alt="icon" style={{ width: "15px", marginRight: "10px" }} />
             Tonton Video
           </button>

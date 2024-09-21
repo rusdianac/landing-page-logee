@@ -66,8 +66,8 @@ function Header() {
           )}
         </div>
 
-        <button className="btn btn-register"><a href="https://app.logee.id/login">Daftar</a></button>
-        <button className="btn btn-login"><a href="https://app.logee.id/login">Masuk</a></button>
+        <button className="btn btn-register" onClick={() => window.location.href = 'https://app.logee.id/login'}>Daftar</button>
+        <button className="btn btn-login" onClick={() => window.location.href = 'https://app.logee.id/login'}>Masuk</button>
       </div>
     </header>
   );
