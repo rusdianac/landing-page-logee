@@ -54,20 +54,25 @@ const Footer = () => {
         <div className="footer-sosmed">
           <ul>
             <li className="logo-container">
-              <img src={instagram} alt="Instagram" />
-              <a href="https://www.instagram.com/t"></a>
+              <a href="https://www.instagram.com/logee.id/" target="_blank" rel="noopener noreferrer">
+                <img src={instagram} alt="Instagram" />
+              </a>
             </li>
             <li className="logo-container">
-              <img src={facebook} alt="Facebook" />
-              <a href="https://www.facebook.com"></a>
+              <a href="https://www.facebook.com/people/Logeeid/100084864591594/" target="_blank" rel="noopener noreferrer">
+                <img src={facebook} alt="Facebook" />
+              </a>
+              
             </li>
             <li className="logo-container">
+            <a href="https://twitter.com/logee_id" target="_blank" rel="noopener noreferrer">
               <img src={twitter} alt="Twitter" />
-              <a href="https://www.twitter.com/"></a>
+            </a>
             </li>
             <li className="logo-container">
+            <a href="https://id.linkedin.com/company/logee-indonesia" target="_blank" rel="noopener noreferrer">
               <img src={linkedin} alt="LinkedIn" />
-              <a href="https://www.linkedin.com/"></a>
+            </a>
             </li>
           </ul>
         </div>
